@@ -1,4 +1,4 @@
-# Pugjs Tutorial
+# Pugjs Example Project
 
 
 

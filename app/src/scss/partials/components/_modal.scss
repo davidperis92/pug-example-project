@@ -1,0 +1,37 @@
+.c-modal {
+  font-weight: bold;
+
+  &__body {
+    padding: 50px 60px 50px 60px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: bold;
+    color: textcolor(terciary);
+
+    &_big {
+      font-weight: normal;
+      @media #{$media-desktop} {
+        font-size: 50px;
+      }
+    }
+  }
+
+  &__label {
+    font-weight: bold;
+    color: textcolor(terciary);
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    margin-bottom: 15px;
+  }
+
+}

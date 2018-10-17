@@ -1,0 +1,47 @@
+$font: 'AkkuratStd';
+$font-light: 'Conv_AkkuratStd-Light';
+$font-bold: 'AkkuratStd-Bold';
+
+$helpersMax: 41;
+
+$min-laptop-width: 992px;
+$max-tablet-width: 991px;
+$min-tablet-width: 768px;
+$max-phone-width: 767px;
+$max-phonexs-width: 426px;
+
+$media-laptop: 'screen and (min-width: #{$min-laptop-width})';
+$media-tablet: 'screen and (min-width: #{$min-tablet-width}) and (max-width : #{$max-tablet-width})';
+$media-desktop: 'screen and (min-width: #{$min-laptop-width})';
+$media-mobile: 'screen and (max-width: #{$max-tablet-width})';
+$media-phone: 'screen and (max-width: #{$max-phone-width})';
+$media-phonexs: 'screen and (max-width: #{$max-phonexs-width})';
+
+$pd-mobile: 0 15px;
+$pd-mobile-lr: 15px;
+
+$assets-path: '../';
+$images-path: $assets-path + 'imagenes/';
+$icons-path: $assets-path + 'iconos/';
+$fonts-path: $assets-path + 'fonts/';
+
+$text-xxxxl: 60px;
+$text-xxxl: 50px;
+$text-xxl: 45px;
+$text-xl: 30px;
+$text-l: 26px;
+$text-m: 20px;
+$text-s: 18px;
+$text-xs: 15px;
+$text-xxs: 14px;
+
+$text-alt-xxxl: 42px;
+$text-alt-xxl: 40px;
+$text-alt-xl: 36px;
+$text-alt-l: 30px;
+$text-alt-m: 24px;
+$text-alt-s: 16px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 500;

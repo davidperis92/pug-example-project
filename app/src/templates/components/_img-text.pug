@@ -1,0 +1,16 @@
+mixin img-text-btn(srcImg, titleBtn, subtitleBtn)
+  .c-img-text.c-img-text_btn
+    img.c-img-text__img( src=srcImg )
+    a.c-img-text__btn(href="#")
+      h1.c-img-text__title-btn #{ titleBtn }
+      h2.c-img-text__subtitle-btn #{ subtitleBtn }
+
+
+//- data: { srcImg: string, title: string, subtitle: string }
+mixin img-text(data)
+  .c-img-text
+    img.c-img-text__img( src=data.srcImg )
+
+    .c-img-text__text-container
+      b.c-img-text__title #{ data.title }
+      span.c-img-text__subtitle #{ data.subtitle }

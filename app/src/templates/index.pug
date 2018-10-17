@@ -1,0 +1,68 @@
+extends bases/base
+
+block variables
+  - var pageClass = 'p-index'
+
+block mainContent
+  section.container.l-content__section.h-pb-mobile-30
+    .row
+      .col-xs-12
+        h1.l-content__title.h-pb-mobile-30
+          | Welcome
+          br
+          | to Gulpjs tutorial
+
+      .col-xs-12
+        .l-content__bloque-texto
+          p.l-content__text
+            | Lorem ipsum cogito ergo sum.
+
+
+  section.l-content__section.l-content__section_alt.h-pb-desktop-60
+    .l-content__section-rectangle
+    .container
+      .row
+        .col-xs-0.col-sm-5
+        .col-xs-12.col-sm-7
+          h1.l-content__title
+            | Gulpjs has a nice syntax
+          .row
+            .col-xs-12
+              p.l-content__text
+                | Lorem ipsum Excepteur reprehenderit enim deserunt ullamco aliquip aliquip in amet ut non enim culpa.
+                | Nulla ex eu sit magna culpa velit in anim ullamco duis ipsum.
+                | Pariatur et cillum aliquip duis do cillum pariatur aute.
+                | Sit velit Lorem consequat ea reprehenderit id. Deserunt nostrud veniam fugiat excepteur do duis mollit ipsum magna.
+
+            .col-xs-12
+              .p-welcome__contenedor-boton
+                a.c-btn Click here to show more
+
+
+  section.l-content__section.h-pb-mobile-0
+    .container
+      .row.h-mb-desktop-60.h-mb-mobile-40
+        .col-xs-12
+          h1.l-content__title
+            | Mixins
+        .col-xs-12.col-sm-6
+          h2.l-content__subtitle
+            | Img-text
+          p.l-content__text
+            | Lorem ipsum Excepteur reprehenderit enim deserunt ullamco aliquip aliquip in amet ut non enim culpa.
+            | Nulla ex eu sit magna culpa velit in anim ullamco duis ipsum.
+            | Pariatur et cillum aliquip duis do cillum pariatur aute.
+      .row
+        .col-xs-12.h-mb-30
+          +img-text-btn(
+            getImage('felix-mittermeier.jpg'),
+            'Lorem ipsum',
+            'cogito ergo sum'
+          )
+        each image in ['eric-muhr', 'amanda-klamrowski', 'jimmy-chang']
+          .col-xs-12.col-md-4.h-mb-mobile-30
+            +img-text({
+              srcImg: getImage(`${image}.jpg`),
+              title: 'Lorem ipsum',
+              subtitle: 'cogito ergo sum'
+            })

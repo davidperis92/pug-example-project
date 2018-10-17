@@ -1,0 +1,42 @@
+$displays: block, inline, flex, table-cell;
+
+@mixin display-helpers() {
+  @each $display in $displays {
+    @media #{$media-mobile} {
+      .d-mobile-#{ $display } {
+        display: $display !important;
+      }
+      .d-desktop-#{ $display } {
+        display: none !important;
+      }
+    }
+
+    @media #{$media-desktop} {
+      .d-desktop-#{ $display } {
+        display: $display !important;
+      }
+      .d-mobile-#{ $display } {
+        display: none !important;
+      }
+    }
+  }
+}
+
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@mixin flex($direction: row, $justify: null, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
+}

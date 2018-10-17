@@ -1,0 +1,48 @@
+{
+  "name": "pugjs-tutorial",
+  "description": "Pugjs tutorial",
+  "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/sopraux/santander-hacktover"
+  },
+  "scripts": {
+    "run": "gulp",
+    "dist": "gulp dist",
+    "lint": "gulp jshint-dist-fail"
+  },
+  "prepush": [
+    "lint"
+  ],
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "fail": "0.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-exec": "^3.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.1.0",
+    "guppy-pre-commit": "^0.4.0",
+    "guppy-pre-push": "^0.2.1",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-select": "^1.13.2",
+    "jquery": "^1.12.4"
+  }
+}

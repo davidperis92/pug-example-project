@@ -1,0 +1,10 @@
+.l-footer {
+  position: relative;
+  height: 300px;
+
+  @media #{$media-mobile} {
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+}

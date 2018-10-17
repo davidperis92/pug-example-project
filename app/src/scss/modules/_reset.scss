@@ -1,0 +1,5 @@
+.modal-dialog {
+  @media #{$media-desktop} {
+    width: 900px;
+  }
+}

@@ -1,0 +1,112 @@
+@include display-helpers();
+
+.h-mg-0 {
+  margin: 0 !important;
+}
+
+.h-mt-0 {
+  margin-top: 0;
+}
+
+.h-mb-0 {
+  margin-bottom: 0;
+}
+
+.h-mb-20 {
+  margin-bottom: 20px;
+}
+
+.h-pd-0 {
+  padding: 0;
+}
+
+@for $i from 0 to $helpersMax {
+  .h-pt-#{$i*5} {
+    padding-top: #{$i*5px};
+  }
+
+  .h-pb-#{$i*5} {
+    padding-bottom: #{$i*5px};
+  }
+
+  .h-mt-#{$i*5} {
+    margin-top: #{$i*5px};
+  }
+
+  .h-mb-#{$i*5} {
+    margin-bottom: #{$i*5px};
+  }
+}
+
+@media #{$media-mobile} {
+
+  @for $i from 0 to $helpersMax {
+    .h-pd-mobile-#{$i*5} {
+      padding: #{$i*5px};
+    }
+
+    .h-pt-mobile-#{$i*5} {
+      padding-top: #{$i*5px};
+    }
+
+    .h-pb-mobile-#{$i*5} {
+      padding-bottom: #{$i*5px};
+    }
+
+    .h-mt-mobile-#{$i*5} {
+      margin-top: #{$i*5px};
+    }
+
+    .h-mb-mobile-#{$i*5} {
+      margin-bottom: #{$i*5px};
+    }
+  }
+
+  .h-col-xs-small {
+    padding-right: 8%;
+    padding-left: 8%;
+  }
+
+  .h-hidden-mobile {
+    display: none;
+  }
+
+}
+
+@media #{$media-desktop} {
+
+  @for $i from 0 to $helpersMax {
+    .h-pd-desktop-#{$i*5} {
+      padding: #{$i*5px};
+    }
+
+    .h-pt-desktop-#{$i*5} {
+      padding-top: #{$i*5px};
+    }
+
+    .h-pb-desktop-#{$i*5} {
+      padding-bottom: #{$i*5px};
+    }
+
+    .h-mt-desktop-#{$i*5} {
+      margin-top: #{$i*5px};
+    }
+
+    .h-mb-desktop-#{$i*5} {
+      margin-bottom: #{$i*5px};
+    }
+  }
+
+  .h-pr-desktop-0 {
+    padding-right: 0 !important;
+  }
+
+  .h-hidden-desktop {
+    display: none;
+  }
+
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+//- @param info: { srcImg: string, title: string }
+mixin card(info)
+  article.c-card&attributes(attributes)
+    img.c-card__img( src=getImage(info.srcImg) )
+    .c-card__content
+      h2.c-card__title #{info.title}
+      .c-card__block
+        block

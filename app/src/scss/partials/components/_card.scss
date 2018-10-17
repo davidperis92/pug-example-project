@@ -1,0 +1,25 @@
+.c-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: backgroundcolor(terciary);
+  padding: 15px;
+
+  &__img {
+    width: 300px;
+    margin-right: 20px;
+
+    @media #{$media-mobile} {
+      width: 50px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    color: textcolor(terciary);
+  }
+
+  .l-content__text {
+    color: textcolor(secondary);
+  }
+}

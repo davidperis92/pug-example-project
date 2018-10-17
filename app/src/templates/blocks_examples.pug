@@ -1,0 +1,48 @@
+extends bases/base
+
+block variables
+  - var pageClass = 'p-blocks-ex'
+
+block mainContent
+  section.container.l-content__section
+    .row
+      .col-xs-12
+        h1.l-content__title.h-pb-mobile-30
+          | Blocks
+          br
+          | Example
+
+      .col-xs-12
+        p.l-content__text
+          | In this page there is an example of how a modal can be created with pugjs:
+        p.l-content__text
+          | Click in show modal button to open the modal.
+
+
+  section.l-content__section.l-content__section.l-content__section_alt.h-mb-mobile-30
+    .container
+      h1.l-content__title.h-pb-mobile-30
+        | Cards
+      -
+        const cards = [
+          { srcImg: 'eric-muhr.jpg', title: 'title1' },
+          { srcImg: 'amanda-klamrowski.jpg', title: 'title2' },
+          { srcImg: 'eric-muhr.jpg', title: 'title3' },
+        ]
+      each item in cards
+        .h-mb-30
+          +card(item)
+            p.l-content__text.
+              Aliqua cupidatat do do anim in excepteur culpa. Ea irure nisi commodo nostrud eu et cillum nulla mollit quis labore fugiat.
+              Reprehenderit reprehenderit proident anim do dolor Lorem nisi reprehenderit.
+              Nulla eu magna cillum proident dolor magna et duis do magna laboris tempor tempor.
+
+
+  section.container.l-content__section.p-blocks-ex__modal-section.text-center
+    a.l-quiz__boton.l-quiz__boton_medium.c-btn(data-target="#modalForm" data-toggle='modal')
+      | Show modal
+
+
+
+block modals
+  include includes/_modal-form

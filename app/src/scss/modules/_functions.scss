@@ -1,0 +1,7 @@
+@function urlImage($image) {
+  @return url($images-path + $image);
+}
+
+@function urlIcon($icon) {
+  @return url($icons-path + $icon);
+}

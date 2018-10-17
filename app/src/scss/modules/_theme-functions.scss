@@ -1,0 +1,15 @@
+@function backgroundcolor($color-name) {
+  @return map-get($background, $color-name);
+}
+
+@function bordercolor($color-name) {
+  @return map-get($bordercolor, $color-name);
+}
+
+@function textcolor($color-name) {
+  @return map-get($textcolor, $color-name);
+}
+
+@function boxshadow($color-name) {
+  @return map-get($boxshadow, $color-name);
+}

@@ -1,0 +1,34 @@
+// use -> background: backgroundcolor(main);
+$background: (
+  main: $grey500,
+  secondary: $white,
+  terciary: $grey700,
+  button: $orange500,
+  input: $grey700,
+  radioOn: $orange500,
+  team: $orange500,
+);
+
+// use -> color: textcolor(main);
+$textcolor: (
+  main: $white,
+  secondary: $grey500,
+  terciary: $red500,
+  mainAlt: $orange500,
+  toggleSelect: $orange500,
+  unselect: $grey600,
+  link: $orange500,
+  correct: $green500,
+  incorrect: $red500,
+);
+
+// use -> border-color: bordercolor(main);
+//     -> border: 1px solid bordercolor(main);
+$bordercolor: (
+  main: $grey500,
+);
+
+// use -> box-shadow: boxshadow(main);
+$boxshadow: (
+  main: 0px 2px 3px 0px rgba($black, 0.1),
+);

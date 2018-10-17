@@ -1,0 +1,7 @@
+block variables
+  - var modalId = 'modal';
+
+.modal.fade(id=modalId role='dialog' aria-hidden='true' aria-labelledby=`${modalId}Label` tabindex='-1')
+  .modal-dialog.c-modal(class=modalClass role='document')
+    .modal-content.c-modal__content
+      block content

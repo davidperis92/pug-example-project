@@ -1,0 +1,94 @@
+.l-content {
+
+  &__section {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow: hidden;
+
+    @media #{$media-mobile} {
+      padding-top: 20px;
+      padding-bottom: 60px;
+    }
+
+    &_alt {
+      background: backgroundcolor(main);
+
+      .l-content__text {
+        color: textcolor(main);
+      }
+    }
+
+    &_alt-mobile {
+      @media #{$media-desktop} {
+        background: backgroundcolor(main);
+        .l-content__text {
+          color: textcolor(main);
+        }
+      }
+    }
+  }
+
+  &__section-rectangle {
+    top: 0;
+    height: 160px;
+    position: absolute;
+    width: 30%;
+    background: backgroundcolor(secondary);
+
+    @media #{$media-phone} {
+      width: 0;
+    }
+  }
+
+  &__title {
+    color: textcolor(terciary);
+    font-size: 5em;
+    line-height: 1em;
+    margin-bottom: 40px;
+
+    @media #{$media-mobile} {
+      font-size: 46px;
+      margin-bottom: 10px;
+    }
+
+    &_alt {
+      color: textcolor(mainAlt);
+      font-size: 4em;
+
+      @media #{$media-mobile} {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: textcolor(terciary);
+    font-size: 32px;
+    margin-top: 0;
+
+    @media #{$media-mobile} {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    &_date {
+      font-size: 23px;
+
+      @media #{$media-mobile} {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 25px;
+  }
+
+  &__label {
+    font-size: 16px;
+  }
+
+}

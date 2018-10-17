@@ -1,5 +1,5 @@
 .modal-dialog {
   @media #{$media-desktop} {
-    width: 900px;
+    max-width: 900px;
   }
 }

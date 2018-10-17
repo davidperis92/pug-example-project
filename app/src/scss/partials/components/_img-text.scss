@@ -26,9 +26,6 @@
     color: textcolor(main);
     font-size: 24px;
 
-    @media #{$media-mobile} {
-      font-size: 45px;
-    }
     @media #{$media-phone} {
       font-size: 36px;
     }

@@ -13,6 +13,11 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   zip = require('gulp-zip'),
   child = require('child_process'),
+  filter = require('gulp-filter'),
+  plumber = require('gulp-plumber'),
+  changed = require('gulp-changed'),
+  cached = require('gulp-cached'),
+  pugInheritance = require('gulp-pug-inheritance'),
   // data_html = require('./app/src/data/data.js'),
   browserSync = require('browser-sync').create();
 
@@ -59,15 +64,43 @@ var vendor_css_src = [
 ];
 
 
+function filterFn(file) {
+  const path = file.relative.split('/');
+  const fileName = path[path.length - 1];
+  return !/^_/.test(fileName);
+}
+
 gulp.task('pug', () => {
-  return gulp.src(src_html_pages)
+  return gulp.src(src_html)
+    .pipe(plumber())
+    .pipe(cached("pug"))
+    .pipe(filter(filterFn))
     .pipe(pug({
       pretty: true,
       basedir: src_html_dir,
-      // data: data_html
+      // data: data_html,
     }))
     .pipe(gulp.dest(dist_dir));
-  browserSync.reload
+});
+
+gulp.task('pug-inheritance', () => {
+  return gulp.src(src_html)
+    .pipe(plumber())
+    .pipe(changed(dist_dir, { extension: '.html' }))
+    .pipe(cached("pug"))
+    .pipe(pugInheritance({
+      basedir: src_html_dir,
+      extension: '.pug',
+      skip: 'node_modules',
+      saveInTempFile: true,
+    }))
+    .pipe(filter(filterFn))
+    .pipe(pug({
+      pretty: true,
+      basedir: src_html_dir,
+      // data: data_html,
+    }))
+    .pipe(gulp.dest(dist_dir));
 });
 
 
@@ -208,7 +241,7 @@ gulp.task('pre-push', function (cb) {
 gulp.task('watch', function () {
   gulp.watch(src_js, ['jshint-dist', 'scripts']).on("change", browserSync.reload);
   gulp.watch(src_sass, ['sass']).on("change", browserSync.reload);
-  gulp.watch(src_html, ['pug']).on("change", browserSync.reload);
+  gulp.watch(src_html, ['pug-inheritance']).on("change", browserSync.reload);
 }).help = 'Keeps watching for changes in sass (trigger sass) and javascript (trigger jshint and scripts).';
 
 

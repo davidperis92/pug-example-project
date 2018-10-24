@@ -13,7 +13,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   zip = require('gulp-zip'),
   child = require('child_process'),
-  data_html = require('./app/src/data/data.js'),
+  // data_html = require('./app/src/data/data.js'),
   browserSync = require('browser-sync').create();
 
 
@@ -64,7 +64,7 @@ gulp.task('pug', () => {
     .pipe(pug({
       pretty: true,
       basedir: src_html_dir,
-      data: data_html
+      // data: data_html
     }))
     .pipe(gulp.dest(dist_dir));
   browserSync.reload

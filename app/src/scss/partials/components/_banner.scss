@@ -1,0 +1,52 @@
+.c-banner {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: lightgray;
+  border: 1px solid darkgrey;
+
+  &__top-content {
+    display: flex;
+  }
+
+  &__img {
+    margin-right: 30px;
+  }
+
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: red;
+  }
+
+  &__text {
+    font-size: 24px;
+  }
+
+  &__mid-content {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid black;
+  }
+
+  &__bot-content {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid black;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    margin-left: 20px;
+    color: green;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

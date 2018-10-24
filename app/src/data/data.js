@@ -7,6 +7,10 @@ const menu = [
     link: 'blocks_examples.html',
     text: 'Blocks Examples'
   },
+  {
+    link: 'blocks_examples.html',
+    text: 'Blocks Examples'
+  },
 ]
 
 module.exports = {

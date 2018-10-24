@@ -1,0 +1,66 @@
+extends bases/_base
+
+block variables
+  - var pageClass = 'p-exercise'
+
+block mainContent
+  section.container.l-content__section
+    .row
+      .col-12
+        h1.l-content__title.h-mb-0
+          | Exercise
+
+
+  section.container.l-content__section
+    .row
+      .col-12
+        h1.h-mb-20
+          | Expected result
+
+    .row
+      .col-12
+        img( src=getImage('expected_result.png') width="100%" )
+
+
+  section.container.l-content__section
+    .row
+      .col-12
+        h1.h-mb-20
+          | Solution
+
+    .row
+      -
+        const banners = [
+          {
+            srcImg: 'evil_closet_monkey_avatar.jpg',
+            title: 'title1',
+            text: 'lorem ipsum cogito ergo sum',
+            links: [
+              'cancel',
+              'accept'
+            ]
+          },
+          {
+            srcImg: 'fighter_pilot_fry_avatar.jpg',
+            text: 'title2 text',
+            html: '<p>lorem <a href="#">ipsum</a></p>',
+            links: [
+              'ignore',
+              'aprove',
+            ]
+          },
+          {
+            srcImg: 'mexican_zoidberg_avatar.jpg',
+            title: 'title3',
+            links: [
+              'ignore',
+            ]
+          },
+        ]
+      //- each item in banners
+      //-   .col-12.h-mb-30
+      //-     if item.html
+      //-       +banner(item)
+      //-         | !{item.html}
+      //-     else
+      //-       +banner(item)

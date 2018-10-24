@@ -18,9 +18,12 @@ head
   var imagesPath = resourcesPath + 'images/'
   var iconsPath = resourcesPath + 'icons/'
 
-
+include /data/_all
 include /includes/_functions
-include /components/_all
+
+
+block components
+  include /components/_all
 
 
 block variables

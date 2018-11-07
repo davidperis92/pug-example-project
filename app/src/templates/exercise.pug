@@ -1,34 +1,28 @@
-extends bases/_base
+extends /bases/_base
 
 block variables
   - var pageClass = 'p-exercise'
 
 block mainContent
-  section.container.l-content__section
-    .row
-      .col-12
-        h1.l-content__title.h-mb-0
-          | Exercise
+  section.l-content__section
+    .l-content__section-inner
+      h1.l-content__title.h-mb-0
+        | Exercise
 
 
-  section.container.l-content__section
-    .row
-      .col-12
-        h1.h-mb-20
-          | Expected result
+  section.l-content__section
+    .l-content__section-inner
+      h1.h-mb-20
+        | Expected result
 
-    .row
-      .col-12
-        img( src=getImage('expected_result.png') width="100%" )
+      img( src=getImage('expected_result.png') width="100%" )
 
 
-  section.container.l-content__section
-    .row
-      .col-12
-        h1.h-mb-20
-          | Solution
+  section.l-content__section
+    .l-content__section-inner
+      h1.h-mb-20
+        | Solution
 
-    .row
       -
         const banners = [
           {
@@ -58,7 +52,7 @@ block mainContent
           },
         ]
       //- each item in banners
-      //-   .col-12.h-mb-30
+      //-   .h-mb-30
       //-     if item.html
       //-       +banner(item)
       //-         | !{item.html}

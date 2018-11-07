@@ -1,5 +1,5 @@
 mixin img-text-btn(srcImg, titleBtn, subtitleBtn)
-  .c-img-text.c-img-text_btn
+  .c-img-text.c-img-text_btn&attributes(attributes)
     img.c-img-text__img( src=srcImg )
     a.c-img-text__btn(href="#")
       h1.c-img-text__title-btn #{ titleBtn }
@@ -8,7 +8,7 @@ mixin img-text-btn(srcImg, titleBtn, subtitleBtn)
 
 //- data: { srcImg: string, title: string, subtitle: string }
 mixin img-text(data)
-  .c-img-text
+  .c-img-text&attributes(attributes)
     img.c-img-text__img( src=data.srcImg )
 
     .c-img-text__text-container

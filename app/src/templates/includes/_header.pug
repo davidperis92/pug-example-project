@@ -2,10 +2,7 @@ header.l-header
   #headerMenuToggle.l-header__menu-toggle.is-collapsed
     img.l-header__toggle-closed.u-width-100(src=getIcon('menu-toggle.png'))
     img.l-header__toggle-open.u-width-100(src=getIcon('menu-toggle-open.png'))
-  #headerMenu.container.l-header__menu-container.is-collapsed
-    .row
-      .col-12.h-pd-mobile-0.u-text-center
-        ul.l-header__menu
-          each item in globals.menu
-            li.l-header__menu-item
-              a.l-header__menu-link(href=item.link) #{item.text}
+  ul#headerMenu.l-header__menu.is-collapsed
+    each item in globals.menu
+      li.l-header__menu-item
+        a.l-header__menu-link(href=item.link) #{item.text}

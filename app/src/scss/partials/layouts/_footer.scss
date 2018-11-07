@@ -1,4 +1,6 @@
 .l-footer {
+  display: grid;
+  grid-area: footer;
   position: relative;
   height: 300px;
 

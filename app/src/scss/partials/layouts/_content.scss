@@ -1,17 +1,39 @@
 .l-content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, auto);
+
+  @media #{$media-phone} {
+  }
 
   &__section {
+    display: grid;
+    grid-template-areas: $lcr-areas;
+    grid-template-columns: $lcr-cols;
     position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
     overflow: hidden;
+    grid-column: 2;
 
     @media #{$media-mobile} {
       padding-top: 20px;
-      padding-bottom: 60px;
+      grid-template-columns: 20px 1fr 20px;
     }
 
     &_alt {
+      display: grid;
+      grid-template: 60px 100px auto / 2fr 1fr 3fr 1fr;
+      background: backgroundcolor(main);
+      padding-top: 0;
+
+      .l-content__text {
+        color: textcolor(main);
+      }
+    }
+
+    &_alt-back {
       background: backgroundcolor(main);
 
       .l-content__text {
@@ -29,15 +51,26 @@
     }
   }
 
+  &__section-inner {
+    grid-column: 2;
+  }
+
   &__section-rectangle {
-    top: 0;
-    height: 160px;
-    position: absolute;
-    width: 30%;
+    grid-column: 1;
+    grid-row: span 2;
     background: backgroundcolor(secondary);
 
     @media #{$media-phone} {
-      width: 0;
+      display: none;
+    }
+  }
+
+  &__info-section-alt {
+    grid-column: 3;
+    grid-row: 2 / -1;
+
+    @media #{$media-phone} {
+      grid-column: 2 / -2;
     }
   }
 

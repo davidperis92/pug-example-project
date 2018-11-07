@@ -1,4 +1,48 @@
 {
+  "includes__footer_pug": {
+    "tree": {
+      "includes/_footer.pug": {
+        "includedBy": [
+          {
+            "bases/_base.pug": {
+              "extendedBy": [
+                {
+                  "blocks_examples.pug": {}
+                },
+                {
+                  "exercise.pug": {}
+                },
+                {
+                  "index.pug": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "files": [
+      "includes/_footer.pug",
+      "bases/_base.pug",
+      "blocks_examples.pug",
+      "exercise.pug",
+      "index.pug"
+    ],
+    "dependencies": [],
+    "file": "includes/_footer.pug"
+  },
+  "index_pug": {
+    "tree": {
+      "index.pug": {}
+    },
+    "files": [
+      "index.pug"
+    ],
+    "dependencies": [
+      "bases/_base"
+    ],
+    "file": "index.pug"
+  },
   "bases__base_pug": {
     "tree": {
       "bases/_base.pug": {
@@ -22,11 +66,11 @@
       "index.pug"
     ],
     "dependencies": [
-      "bases/data/_all",
-      "bases/includes/_functions",
-      "bases/components/_all",
-      "bases/includes/_header",
-      "bases/includes/_footer"
+      "data/_all",
+      "includes/_functions",
+      "components/_all",
+      "includes/_header",
+      "includes/_footer.pug"
     ],
     "file": "bases/_base.pug"
   },
@@ -42,16 +86,47 @@
     ],
     "file": "exercise.pug"
   },
-  "index_pug": {
+  "blocks_examples_pug": {
     "tree": {
-      "index.pug": {}
+      "blocks_examples.pug": {}
     },
     "files": [
-      "index.pug"
+      "blocks_examples.pug"
     ],
     "dependencies": [
-      "bases/_base"
+      "bases/_base",
+      "includes/_modal-form"
     ],
-    "file": "index.pug"
+    "file": "blocks_examples.pug"
+  },
+  "includes__header_pug": {
+    "tree": {
+      "includes/_header.pug": {}
+    },
+    "files": [
+      "includes/_header.pug"
+    ],
+    "dependencies": [],
+    "file": "includes/_header.pug"
+  },
+  "components__img_text_pug": {
+    "tree": {
+      "components/_img-text.pug": {}
+    },
+    "files": [
+      "components/_img-text.pug"
+    ],
+    "dependencies": [],
+    "file": "components/_img-text.pug"
+  },
+  "components__banner_pug": {
+    "tree": {
+      "components/_banner.pug": {}
+    },
+    "files": [
+      "components/_banner.pug"
+    ],
+    "dependencies": [],
+    "file": "components/_banner.pug"
   }
 }

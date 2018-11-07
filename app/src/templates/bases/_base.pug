@@ -31,12 +31,13 @@ block variables
 
 
 body(class=pageClass)
-  include /includes/_header
+  .l-main-grid
+    include /includes/_header
 
-  .l-content
-    block mainContent
+    .l-content
+      block mainContent
 
-  include /includes/_footer
+    include /includes/_footer
 
 
-  block modals
+    block modals

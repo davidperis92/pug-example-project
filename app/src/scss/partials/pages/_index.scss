@@ -2,10 +2,6 @@
   &__mixins-gallery {
     display: grid;
     grid-template: auto auto / 1fr 1fr;
-
-    @media #{$media-phone} {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__gallery-info {
@@ -17,13 +13,5 @@
     display: grid;
     grid-template: auto 1fr / repeat(3, 1fr);
     grid-gap: 20px;
-
-    @media #{$media-phone} {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__gallery-big-img {
-    grid-column: 1 / -1;
   }
 }

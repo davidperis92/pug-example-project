@@ -30,8 +30,8 @@ block mainContent
 
 
   section.l-content__section
-    .l-content__section-inner.p-index__mixins-gallery
-      .p-index__gallery-info
+    .l-content__section-inner.p-index__mixins-gallery.gl-phone-template-cols-1
+      .gl-col-1
         h1.l-content__title
           | Mixins
         h2.l-content__subtitle
@@ -40,15 +40,15 @@ block mainContent
           | Lorem ipsum Excepteur reprehenderit enim deserunt ullamco aliquip aliquip in amet ut non enim culpa.
           | Nulla ex eu sit magna culpa velit in anim ullamco duis ipsum.
           | Pariatur et cillum aliquip duis do cillum pariatur aute.
-      .p-index__gallery
+      .p-index__gallery.gl-phone-template-cols-1
         +img-text-btn(
           getImage('felix-mittermeier.jpg'),
           'Lorem ipsum',
           'cogito ergo sum'
-        )(class="p-index__gallery-big-img")
+        )(class="gl-col-full")
         each image in ['eric-muhr', 'amanda-klamrowski', 'jimmy-chang']
           +img-text({
             srcImg: getImage(`${image}.jpg`),
             title: 'Lorem ipsum',
             subtitle: 'cogito ergo sum'
-          })(class="p-index__gallery-img")
+          })

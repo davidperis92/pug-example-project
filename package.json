@@ -20,6 +20,7 @@
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "fail": "0.0.0",
+    "grid-layout-utils": "0.0.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",

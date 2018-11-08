@@ -4,9 +4,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fill, auto);
 
-  @media #{$media-phone} {
-  }
-
   &__section {
     display: grid;
     grid-template-areas: $lcr-areas;
@@ -27,6 +24,10 @@
       grid-template: 60px 100px auto / 2fr 1fr 3fr 1fr;
       background: backgroundcolor(main);
       padding-top: 0;
+
+      @media #{$media-phone} {
+        grid-template-columns: 20px 1fr 20px;
+      }
 
       .l-content__text {
         color: textcolor(main);

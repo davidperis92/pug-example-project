@@ -6,30 +6,20 @@ block variables
 
 block content
   .modal-body.c-modal__body
-    .row
-      .col-12
-        h1.c-modal__title
-          | Modal Example
-      .col-12
-        h4.c-modal__label
-          | Please fill out the blanks with an *
+    h1.c-modal__title
+      | Modal Example
+    h4.c-modal__label
+      | Please fill out the blanks with an *
+    p.c-modal__text.
+      Lorem elit Lorem do duis enim mollit ad esse irure proident adipisicing occaecat do.
+      Tempor laborum occaecat in ea dolor nisi fugiat ex ut mollit pariatur tempor laborum.
+      Et qui eiusmod commodo dolore nisi excepteur dolor in eu est in irure enim.
+    p.c-modal__text.
+      Lorem elit Lorem do duis enim mollit ad esse irure proident adipisicing occaecat do.
+    h4.c-modal__label.h-mb-30
+      | Let's Start!
+    input.c-input.c-modal__input(type="text" placeholder="Country *")
+    input.c-input.c-modal__input(type="text" placeholder="Please put your Employee email")
 
-      .col-12
-        p.c-modal__text.
-          Lorem elit Lorem do duis enim mollit ad esse irure proident adipisicing occaecat do.
-          Tempor laborum occaecat in ea dolor nisi fugiat ex ut mollit pariatur tempor laborum.
-          Et qui eiusmod commodo dolore nisi excepteur dolor in eu est in irure enim.
-        p.c-modal__text.
-          Lorem elit Lorem do duis enim mollit ad esse irure proident adipisicing occaecat do.
-
-      .col-12
-        h4.c-modal__label.h-mb-30
-          | Let's Start!
-
-      .col-12
-        input.c-input.c-modal__input(type="text" placeholder="Country *")
-      .col-12
-        input.c-input.c-modal__input(type="text" placeholder="Please put your Employee email")
-
-      .col-12.h-mt-10
-        button.c-btn.c-btn_small(data-dismiss="modal") Next
+    .h-mt-10
+      button.c-btn.c-btn_small(data-dismiss="modal") Next

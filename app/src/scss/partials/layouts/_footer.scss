@@ -1,12 +1,10 @@
 .l-footer {
-  display: grid;
   grid-area: footer;
+  display: grid;
+  grid-template-areas: $lcr-areas;
+  grid-template-columns: $lcr-cols;
   position: relative;
-  height: 300px;
-
-  @media #{$media-mobile} {
-    height: 150px;
-    margin-bottom: 20px;
-  }
-
+  height: 100px;
+  align-items: center;
+  background: backgroundcolor(terciary);
 }

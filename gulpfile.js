@@ -31,7 +31,6 @@ var
   dist_src = path.join(dist_dir, '**');
 
 var
-  src_vendor_legacy = path.join(src_dir, 'vendor', '**', '*'),
   src_fonts = path.join(assets_dir, 'fonts', '**'),
   src_js = path.join(src_dir, 'js', '**', '*.js');
 
@@ -39,7 +38,6 @@ var
   src_sass = path.join(src_dir, 'scss', '**', '*.scss'),
   src_assets = path.join(assets_dir, '**'),
   src_html_dir = path.join(src_dir, 'templates'),
-  src_html_pages = path.join(src_html_dir, '*.pug'),
   src_html = path.join(src_html_dir, '**', '*.pug');
 
 var
@@ -60,7 +58,8 @@ var vendor_js_src = [
 
 var vendor_css_src = [
   'node_modules/bootstrap/dist/css/bootstrap.min.css',
-  'node_modules/bootstrap-select/dist/css/bootstrap-select.min.css'
+  'node_modules/bootstrap-select/dist/css/bootstrap-select.min.css',
+  'node_modules/grid-layout-utils/dist/grid-layout.css',
 ];
 
 
@@ -168,12 +167,6 @@ gulp.task('vendor', function () {
 }).help = 'Concatenates vendor files.';
 
 
-gulp.task('vendor-legacy', function () {
-  return gulp.src(src_vendor_legacy)
-    .pipe(gulp.dest(dist_dir));
-}).help = 'Add vendor legacy files.';
-
-
 gulp.task('scripts-min', function () {
   return gulp
     .src(src_js)
@@ -257,7 +250,7 @@ gulp.task('browser-sync', function () {
 gulp.task('dist', function () {
   runSequence(
     'clean',
-    ['pug', 'vendor-legacy', /*'jshint-dist-fail',*/ 'fonts', 'images', 'vendor', 'sass-min', 'scripts'],
+    ['pug', /*'jshint-dist-fail',*/ 'fonts', 'images', 'vendor', 'sass-min', 'scripts'],
     function () {
       gulp.src(dist_src)
       .pipe(zip('dist.zip'))
@@ -274,7 +267,7 @@ gulp.task('dist', function () {
 gulp.task('default', function () {
   runSequence(
     'clean',
-    ['pug', 'vendor-legacy', 'jshint-dist', 'fonts', 'images', 'vendor', 'sass', 'scripts'], ['watch', 'browser-sync'],
+    ['pug', 'jshint-dist', 'fonts', 'images', 'vendor', 'sass', 'scripts'], ['watch', 'browser-sync'],
     function () {
       gulp.src('').pipe(notify({
         title: 'Development',

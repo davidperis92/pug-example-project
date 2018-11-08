@@ -128,5 +128,17 @@
     ],
     "dependencies": [],
     "file": "components/_banner.pug"
+  },
+  "includes__modal_form_pug": {
+    "tree": {
+      "includes/_modal-form.pug": {}
+    },
+    "files": [
+      "includes/_modal-form.pug"
+    ],
+    "dependencies": [
+      "includes/bases/_modal"
+    ],
+    "file": "includes/_modal-form.pug"
   }
 }
